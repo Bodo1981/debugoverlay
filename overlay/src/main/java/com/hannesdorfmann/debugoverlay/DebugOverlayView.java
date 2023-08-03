@@ -34,7 +34,7 @@ class DebugOverlayView extends FrameLayout {
     Point windowDimen = new Point();
     windowManager.getDefaultDisplay().getSize(windowDimen);
 
-    int desiredLayoutHeight = dpToPx(context, R.dimen.debugOverlayHeight);
+    int desiredLayoutHeight = dpToPx(context, context.getResources().getDimension(R.dimen.debugOverlayHeight));
     int layoutHeight = desiredLayoutHeight < windowDimen.y ? desiredLayoutHeight : windowDimen.y;
 
     // Setup the GUI
