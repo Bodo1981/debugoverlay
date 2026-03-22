@@ -20,6 +20,13 @@ android {
       proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
     }
   }
+  publishing {
+    singleVariant("release") {
+      // Optional: uncomment to also publish sources and javadoc
+      // withSourcesJar()
+      // withJavadocJar()
+    }
+  }
 
   compileOptions {
     sourceCompatibility JavaVersion.VERSION_21
